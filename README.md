@@ -1,2 +1,0 @@
-# spranesh.github.io
-Site
