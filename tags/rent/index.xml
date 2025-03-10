@@ -1,0 +1,92 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Rent - Tag - Pranesh Srinivasan</title>
+        <link>spranesh.github.io/tags/rent/</link>
+        <description>Rent - Tag - Pranesh Srinivasan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 24 Jul 2014 00:00:00 &#43;0000</lastBuildDate><atom:link href="spranesh.github.io/tags/rent/" rel="self" type="application/rss+xml" /><item>
+    <title>The true cost of renting</title>
+    <link>spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</link>
+    <pubDate>Thu, 24 Jul 2014 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</guid>
+    <description><![CDATA[<script type="text/javascript">
+
+function GetBonusMessage(extra) {
+     var item = "";
+     if( extra > 150000 )
+        item = "a european vacation";
+     else if( extra > 100000 )
+        item = "a used hatchback";
+     else if( extra > 70000 )
+        item = "a very good two wheeler";
+     else if( extra > 50000 )
+        item = "a home theatre system";
+     else if ( extra > 40000 )
+        item = "the best camera phone that currently exists";
+     else if ( extra > 30000 )
+        item = "a top choice entry-level DSLR camera";
+     else if ( extra > 20000 )
+        item = "a top of the line smartphone";
+     else if ( extra > 10000 )
+        item = "a fairly good smartphone";
+     else if ( extra > 5000 )
+        item = "return tickets for a domestic flight (if you book early)";
+     else if ( extra > 2000 )
+        item = "a spa package";
+
+     if ( item != "" )
+     {
+        var bonus_msg = "<b>Bonus</b>: To put that in perspective, the amount you would save during your whole tenure, ";
+        bonus_msg    += "Rs. <span class=net-extra-for-tenure></span> could buy you " + item +"."; 
+        return bonus_msg;
+     }
+     return "";
+}
+
+function CalculateTrueCost() {
+     $( "#analysis" ).hide();
+
+
+     var interest      = 0.06;
+
+     var broker_months = 1.0 * ( $( "#broker-used" ).is(":checked") ? 1 : 0 );
+     var tenure          = parseFloat( $( "#months-rented" ).val() );
+     var advance         = parseFloat( $( "#months-advance" ).val() );
+     var painting_charge = parseFloat( $( "#painting-charges" ).val() );
+     var monthly_rent    = parseFloat( $( "#monthly-rent" ).val() );
+
+     $( ".tenure" ).html( tenure.toFixed( 1 ) );
+
+     var broker_charge 	       = broker_months * monthly_rent;
+     var deposit_interest      = monthly_rent * tenure / 12 * advance * interest;
+     var net_extra_for_tenure  = broker_charge + deposit_interest + painting_charge;
+     var net_extra_per_month   = net_extra_for_tenure / tenure;
+     var net_extra_percentage  = net_extra_per_month / monthly_rent * 100;
+
+     // display Bonus first to fill in numbers inside the bonus.
+     $( "#bonus" ).html( GetBonusMessage( net_extra_for_tenure ) );
+
+     $( ".deposit-interest" ).html( deposit_interest.toFixed( 0 ));
+     $( ".painting-charge" ).html( painting_charge.toFixed( 0 ) );
+     $( ".broker-charge" ).html( broker_charge.toFixed( 0 ) );
+     $( ".painting-broker" ).html( (painting_charge + broker_charge ).toFixed( 0 ) );
+
+     $( ".net-extra-for-tenure" ).html( net_extra_for_tenure.toFixed( 0 ) );
+     $( ".net-extra-percentage" ).html( net_extra_percentage.toFixed( 2 ) );
+     $( ".net-extra-per-month" ).html( net_extra_per_month.toFixed(0) );
+     $( ".true-rent" ).html( ( net_extra_per_month + monthly_rent ).toFixed( 0 ) );
+
+     $( "#analysis" ).show( "slow" );
+      return false;
+};
+</script>
+<p>Ever since I read about <a href="http://www.investopedia.com/articles/pf/08/cost-car-ownership.asp" target="_blank" rel="noopener noreffer ">the true cost of owning a
+car</a>, I&rsquo;ve
+generally thought about the true all-in costs of things &ndash; a phone plan, a
+housing loan, running a hypothetical <em>chai</em> shop, etc.. While I pursue this
+train of thought for purely intellectual purposes, it sometimes leads to
+conclusions that I find surprising.</p>]]></description>
+</item>
+</channel>
+</rss>

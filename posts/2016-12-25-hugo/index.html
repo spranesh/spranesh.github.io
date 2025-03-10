@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>From Jekyll to Hugo - Pranesh Srinivasan</title><meta name="Description" content="Pranesh Srinivasan&#39;s Blog"><meta property="og:url" content="spranesh.github.io/posts/2016-12-25-hugo/">
+  <meta property="og:site_name" content="Pranesh Srinivasan">
+  <meta property="og:title" content="From Jekyll to Hugo">
+  <meta property="og:description" content="I’ve always used static generators to run my website. They are performant to serve, and a good one can provide both flexibility and simplicity at the same time.
+My first website (on my alma mater’s 20MB hosting space for every student) used a bunch of perl scripts to shove templates and content together. A couple of years ago, when I was forced to move off my department’s hosting, I stumbled upon Jekyll.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-12-25T09:26:41-08:00">
+    <meta property="article:modified_time" content="2016-12-25T09:26:41-08:00">
+    <meta property="article:tag" content="Software">
+    <meta property="og:image" content="/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/logo.png">
+  <meta name="twitter:title" content="From Jekyll to Hugo">
+  <meta name="twitter:description" content="I’ve always used static generators to run my website. They are performant to serve, and a good one can provide both flexibility and simplicity at the same time.
+My first website (on my alma mater’s 20MB hosting space for every student) used a bunch of perl scripts to shove templates and content together. A couple of years ago, when I was forced to move off my department’s hosting, I stumbled upon Jekyll.">
+<meta name="application-name" content="Pranesh Srinivasan">
+<meta name="apple-mobile-web-app-title" content="Pranesh Srinivasan"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="spranesh.github.io/posts/2016-12-25-hugo/" /><link rel="prev" href="spranesh.github.io/posts/2016-03-18-analysis-rost/" /><link rel="next" href="spranesh.github.io/posts/2017-02-04-fmcg/" /><link rel="stylesheet" href="spranesh.github.io/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "From Jekyll to Hugo",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "spranesh.github.io\/posts\/2016-12-25-hugo\/"
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "software","wordcount":  833 ,
+        "url": "spranesh.github.io\/posts\/2016-12-25-hugo\/","datePublished": "2016-12-25T09:26:41-08:00","dateModified": "2016-12-25T09:26:41-08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Pranesh Srinivasan"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="spranesh.github.io/" title="Pranesh Srinivasan"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/spranesh.github.io/about/"> About </a><a class="menu-item" href="/spranesh.github.io/interests/"> Interests </a><a class="menu-item" href="/spranesh.github.io/projects/"> Projects </a><a class="menu-item" href="/spranesh.github.io/posts/"> Blog </a><a class="menu-item" href="/spranesh.github.io"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="spranesh.github.io/" title="Pranesh Srinivasan"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/spranesh.github.io/about/" title="">About</a><a class="menu-item" href="/spranesh.github.io/interests/" title="">Interests</a><a class="menu-item" href="/spranesh.github.io/projects/" title="">Projects</a><a class="menu-item" href="/spranesh.github.io/posts/" title="">Blog</a><a class="menu-item" href="/spranesh.github.io" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">From Jekyll to Hugo</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="spranesh.github.io/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Pranesh Srinivasan</a></span>&nbsp;<span class="post-category">included in <a href="spranesh.github.io/categories/programming/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Programming</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2016-12-25">2016-12-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;833 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#why-hugo">Why Hugo?</a></li>
+        <li><a href="#challenges-or-what-jekyll-does-really-well">Challenges (or what Jekyll does really well)</a>
+          <ul>
+            <li><a href="#soultion-the-theme">Soultion: The theme</a></li>
+            <li><a href="#solution-related-posts">Solution: Related posts</a></li>
+            <li><a href="#solution-keeping-popular-urls">Solution: Keeping popular URLs</a></li>
+          </ul>
+        </li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>I&rsquo;ve always used static generators to run my website. They are performant to
+serve, and a good one can provide both flexibility and simplicity at the same
+time.</p>
+<p>My first website (on my <a href="http://www.cse.iitm.ac.in" target="_blank" rel="noopener noreffer ">alma mater&rsquo;s</a> 20MB hosting
+space for every student) used a bunch of perl scripts to shove templates and
+content together. A couple of years ago, when I was forced to move off my
+department&rsquo;s hosting, I stumbled upon Jekyll.</p>
+<h3 id="why-hugo">Why Hugo?</h3>
+<p>Jekyll is quite fantastic with flexibility, but the setup leaves a lot to be
+desired.  One needs to have the right ruby gems, the correct python packages,
+and if you use a theme like <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" target="_blank" rel="noopener noreffer ">minimal
+mistakes</a>, you&rsquo;ll
+also need Grundle, Rake, and LESS.</p>
+<p>In order to avoid managing multiple setups, I only ever set it up in one place
+and writing posts had to be done by SSHing into a box. I know that there are
+ways to automate and streamline the setup, but I did not have the time to learn
+one more piece of indirection and layering.  The downside to this was two fold:</p>
+<ol>
+<li>
+<p>Writing is already a difficult task to begin with, and having to SSH into a
+box meant even more activation energy.</p>
+</li>
+<li>
+<p>I was very dependent on one box.</p>
+</li>
+</ol>
+<p>Earlier this year, I found out about <a href="http://gohugo.io" target="_blank" rel="noopener noreffer ">hugo</a>, another static
+generator, but written in Go. It has one <strong>enormous</strong> advantage - the binary is
+statically linked with no dependencies. This meant that running hugo was as
+simple as downloading the latest release. No setups. No machine dependecies!</p>
+<p>Written in Go, Hugo was also supposed to be super fast. Of course, all of this
+came at the cost of the kind of hyper flexibility that Jekyll offered. Still, I
+was immediately interested.</p>
+<h3 id="challenges-or-what-jekyll-does-really-well">Challenges (or what Jekyll does really well)</h3>
+<p>There were three challenges with moving to Hugo:</p>
+<ol>
+<li>
+<p>The minimal mistakes theme had not been ported. I would have to either find
+an alternate theme or port the theme myself.</p>
+</li>
+<li>
+<p>Jekyll automatically figures out related content by using a cosine similarity
+metric between post word vectors. Hugo does not support this and it&rsquo;s still an <a href="https://discuss.gohugo.io/t/show-a-list-of-related-content/1488" target="_blank" rel="noopener noreffer ">open
+discussion</a>.</p>
+</li>
+<li>
+<p>Hugo does not allow categories to be part of the
+<a href="http://gohugo.io/extras/permalinks" target="_blank" rel="noopener noreffer ">permalink</a>. In Jekyll, my posts would have
+URLs like /category/post-name. I would break URLs going forward.</p>
+</li>
+</ol>
+<h4 id="soultion-the-theme">Soultion: The theme</h4>
+<p>After browsing a lot of <a href="http://themes.gohugo.io/" target="_blank" rel="noopener noreffer ">themes</a> and not finding
+anything suitable, I decided to port the Minimal Mistakes theme to hugo.
+Minimal Mistakes is a huge theme, and I only ported the parts I use. I started
+off by downloading the raw HTML page from my Jekyll site, and then working
+backwards, replacing just the content and variables I needed.</p>
+<p>I created partial templates for the header, navbar, banner, author bio and the
+footer, and used these to write the following templates:</p>
+<ul>
+<li>index.html: for the <a href="/" rel="">home</a> page with recent posts.</li>
+<li>_default/single.html: for <a href="/about/" rel="">about</a>, <a href="/projects/" rel="">projects</a> and <a href="/latticework/" rel="">latticework</a>)</li>
+<li>section/post.html: for the <a href="/post/" rel="">archive</a></li>
+<li>post/single.html: for individual blog posts such as this one.</li>
+</ul>
+<p>The latest version of Hugo (0.18) treats everything as a PAGE. This helped a
+lot in my migration, since I did not have to special case frontmatter metadata
+for non post pages.</p>
+<p>I am quite satisfied with the final look. I plan to open source my port of the
+theme after adding an example site.</p>
+<h4 id="solution-related-posts">Solution: Related posts</h4>
+<p>A solution was to patch the hugo source to add cosine similarity and support
+related content. But this would mean customising the binary, and losing the
+main benefit of the move to Hugo.</p>
+<p>I eventually settled with using tags <strong>and</strong> categories to find related
+content. The code to do this ended up relatively simple:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if index .Params &#34;showrelated&#34; | default true -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>You might also enjoy<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ $page_link := .Permalink -}}
+</span></span><span class="line"><span class="cl">  {{ $categories := .Params.categories -}}
+</span></span><span class="line"><span class="cl">  {{ $tags := .Params.tags -}}
+</span></span><span class="line"><span class="cl">  {{ range .Site.Pages -}}
+</span></span><span class="line"><span class="cl">      {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 -}}
+</span></span><span class="line"><span class="cl">      {{ $has_common_cats := intersect $categories .Params.categories | len | lt 0 -}}
+</span></span><span class="line"><span class="cl">      {{ $page := . -}}
+</span></span><span class="line"><span class="cl">      {{ if (and (or $has_common_tags $has_common_cats) (ne $page_link $page.Permalink)) -}}
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $page.Permalink }}&#34;</span><span class="p">&gt;</span>{{ $page.Title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      {{ end -}}
+</span></span><span class="line"><span class="cl">  {{ end -}}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end -}}</span></span></code></pre></div></div>
+<p>If there was no other post with overlapping categories or posts, no related
+posts would be rendered, but the <code>&lt;ul&gt;</code> tag would still be shown. To fix this
+edge case, I added a post level param <code>showrelated</code> that I could set to false
+to hide the whole section.</p>
+<h4 id="solution-keeping-popular-urls">Solution: Keeping popular URLs</h4>
+<p>While Hugo does not allow for category in the permalink, it does allow for
+<a href="https://gohugo.io/extras/aliases/" target="_blank" rel="noopener noreffer ">post aliases</a>. Using this was fairly straightforward:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-md">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">----
+</span></span><span class="line"><span class="cl">title: &#34;...&#34;
+</span></span><span class="line"><span class="cl">aliases:
+</span></span><span class="line"><span class="cl"><span class="k">-</span> /old-category/old-name/
+</span></span><span class="line"><span class="cl">----</span></span></code></pre></div></div>
+<p>This enabled me to keep around links of my most popular posts
+(<a href="/data/intuitive-axes" rel="">example</a>).</p>
+<h3 id="summary">Summary</h3>
+<p>Moving the site to Hugo took me the better part of 2 days, with the majority of
+the time going into porting the theme. It&rsquo;s now easier to deploy, and much
+easier to write. Time will tell about the robustness of this setup. Currently,
+I <i class="fa fa-heart" aria-hidden="true"></i> Hugo!</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2016-12-25</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="spranesh.github.io/posts/2016-12-25-hugo/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="spranesh.github.io/posts/2016-12-25-hugo/" data-title="From Jekyll to Hugo" data-hashtags="software"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="spranesh.github.io/posts/2016-12-25-hugo/" data-title="From Jekyll to Hugo"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="spranesh.github.io/posts/2016-12-25-hugo/" data-hashtag="software"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="spranesh.github.io/posts/2016-12-25-hugo/" data-title="From Jekyll to Hugo"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="spranesh.github.io/posts/2016-12-25-hugo/" data-title="From Jekyll to Hugo"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="spranesh.github.io/posts/2016-12-25-hugo/" data-title="From Jekyll to Hugo"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="spranesh.github.io/posts/2016-12-25-hugo/" data-title="From Jekyll to Hugo" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=spranesh.github.io%2fposts%2f2016-12-25-hugo%2f&amp;text=From%20Jekyll%20to%20Hugo" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="spranesh.github.io/tags/software/">Software</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="spranesh.github.io/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="spranesh.github.io/posts/2016-03-18-analysis-rost/" class="prev" rel="prev" title="Analysis: ROSS Dress For Less (ROST)"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Analysis: ROSS Dress For Less (ROST)</a>
+            <a href="spranesh.github.io/posts/2017-02-04-fmcg/" class="next" rel="next" title="Survey of non-food FMCGs">Survey of non-food FMCGs<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="spranesh.github.io/" target="_blank">Pranesh Srinivasan</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="spranesh.github.io/js/theme.min.js"></script></body>
+</html>

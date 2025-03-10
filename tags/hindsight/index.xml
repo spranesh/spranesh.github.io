@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hindsight - Tag - Pranesh Srinivasan</title>
+        <link>spranesh.github.io/tags/hindsight/</link>
+        <description>Hindsight - Tag - Pranesh Srinivasan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 19 Feb 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="spranesh.github.io/tags/hindsight/" rel="self" type="application/rss+xml" /><item>
+    <title>The decision-outcome matrix</title>
+    <link>spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/</link>
+    <pubDate>Thu, 19 Feb 2015 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/</guid>
+    <description><![CDATA[<p>Consider any decision that can either be <em>taken</em> or <em>not taken</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and the outcome of this decision
+to either be <em>good</em> or <em>bad</em><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<table class="table table-bordered table-striped">
+  <colgroup>
+    <col class="col-md-4"><col class="col-md-4"><col class="col-md-4">
+  </colgroup>
+  <thead>
+    <tr><td></td> <th><center>Good Outcome</center></th><th><center>Bad Outcome</center></th></tr>
+  </thead>
+  <tbody>
+    <tr><td> Decision Taken     </td> <td><center>1</center></td><td><center>2</center></td></tr>
+    <tr><td> Decision Not Taken </td> <td><center>3</center></td><td><center>4</center></td></tr>
+  </tbody>
+</table>
+<p><strong>1</strong> and <strong>4</strong> are the easy cases - much good was had, and much sadness was avoided.</p>
+<p><strong>2</strong> leads to a feeling of disappointment, with much time spent on focusing on
+the outcome. <strong>3</strong> leads to regret, with much time spent on focusing on the
+personal choices and a desire to have done something differently. These two
+feelings are not the same<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> and while the relative magnitude of these feelings
+is of course a function of personal outlook, studies<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> do show that dealing
+with regret is harder<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>]]></description>
+</item>
+</channel>
+</rss>

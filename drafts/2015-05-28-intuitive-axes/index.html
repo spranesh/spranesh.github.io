@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Choosing intuitive axes - Pranesh Srinivasan</title><meta name="Description" content="Pranesh Srinivasan&#39;s Blog"><meta property="og:url" content="spranesh.github.io/drafts/2015-05-28-intuitive-axes/">
+  <meta property="og:site_name" content="Pranesh Srinivasan">
+  <meta property="og:title" content="Choosing intuitive axes">
+  <meta property="og:description" content="Earlier today, the New York times published a wonderful visualization on how family income affects children’s college chances. The visualization uses a new you-draw-it-first paradigm, where the reader guesses the expected relationship / trend before being shown the actual data. I found the idea very cool. Go ahead and try it, I’ll wait. It’s easy to see why this is easily one of my favourite NY Times visualizations ever.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="drafts">
+    <meta property="article:published_time" content="2015-05-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2015-05-28T00:00:00+00:00">
+    <meta property="og:image" content="/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/logo.png">
+  <meta name="twitter:title" content="Choosing intuitive axes">
+  <meta name="twitter:description" content="Earlier today, the New York times published a wonderful visualization on how family income affects children’s college chances. The visualization uses a new you-draw-it-first paradigm, where the reader guesses the expected relationship / trend before being shown the actual data. I found the idea very cool. Go ahead and try it, I’ll wait. It’s easy to see why this is easily one of my favourite NY Times visualizations ever.">
+<meta name="application-name" content="Pranesh Srinivasan">
+<meta name="apple-mobile-web-app-title" content="Pranesh Srinivasan"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="spranesh.github.io/drafts/2015-05-28-intuitive-axes/" /><link rel="prev" href="spranesh.github.io/drafts/2014-08-07-whats-the-rationale-behind-power-cuts/" /><link rel="stylesheet" href="spranesh.github.io/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Choosing intuitive axes",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "spranesh.github.io\/drafts\/2015-05-28-intuitive-axes\/"
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "drafts","wordcount":  713 ,
+        "url": "spranesh.github.io\/drafts\/2015-05-28-intuitive-axes\/","datePublished": "2015-05-28T00:00:00+00:00","dateModified": "2015-05-28T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Pranesh Srinivasan"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="spranesh.github.io/" title="Pranesh Srinivasan"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/spranesh.github.io/about/"> About </a><a class="menu-item" href="/spranesh.github.io/interests/"> Interests </a><a class="menu-item" href="/spranesh.github.io/projects/"> Projects </a><a class="menu-item" href="/spranesh.github.io/posts/"> Blog </a><a class="menu-item" href="/spranesh.github.io"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="spranesh.github.io/" title="Pranesh Srinivasan"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/spranesh.github.io/about/" title="">About</a><a class="menu-item" href="/spranesh.github.io/interests/" title="">Interests</a><a class="menu-item" href="/spranesh.github.io/projects/" title="">Projects</a><a class="menu-item" href="/spranesh.github.io/posts/" title="">Blog</a><a class="menu-item" href="/spranesh.github.io" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Choosing intuitive axes</h1><div class="content" id="content"><p>Earlier today, the New York times <a href="http://nyti.ms/1LLH6ml" target="_blank" rel="noopener noreffer ">published</a> a
+wonderful visualization on how family income affects children&rsquo;s college
+chances. The visualization uses a new you-draw-it-first paradigm, where the
+reader guesses the expected relationship / trend before being shown the actual
+data. I found the idea very cool. Go ahead and try it, I&rsquo;ll wait.  It&rsquo;s easy to
+see why this is easily one of my favourite NY Times visualizations ever.</p>
+<p>Except, they chose the wrong dataset to exhibit the you-draw-it-first paradigm.</p>
+<h3 id="spoiler-alert">Spoiler Alert</h3>
+<p>After you proceed to draw your guess, you find out that the relationship
+between &ldquo;Percent of children who attend college&rdquo; and &ldquo;Parents&rsquo; income
+percentile&rdquo; turns out to be surprisingly<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> linear. Apart from the article
+itself calling the result &ldquo;astonishing&rdquo;, the aggregate responses given by NY Times
+readers (as of my writing the post) looks like the shaded region in this<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>:</p>
+<p><img
+        class="lazyload"
+        src="spranesh.github.io/svg/loading.min.svg"
+        data-src="/images/post-photos/NYTimesAggregate.png"
+        data-srcset="/images/post-photos/NYTimesAggregate.png, /images/post-photos/NYTimesAggregate.png 1.5x, /images/post-photos/NYTimesAggregate.png 2x"
+        data-sizes="auto"
+        alt="/images/post-photos/NYTimesAggregate.png"
+        title="Aggregate of Trends drawn by NY Times Readers - 10:45 PM PDT" /></p>
+<p>As it turns out, the linearity arises only because of a few tricks
+at play here:</p>
+<ul>
+<li><em>Income Rank</em> in the US is distributed ~log(<em>Dollar Income</em>).</li>
+<li>The original paper, <a href="http://www.equality-of-opportunity.org/images/mobility_geo.pdf" target="_blank" rel="noopener noreffer ">Chetty, Hendren, Kline</a>,
+talks about the quality of college attended as well, which the NYTimes article leaves it out.</li>
+<li>The original paper defines attending college as the mere presence of one or more
+<a href="http://www.irs.gov/uac/Form-1098-T,-Tuition-Statement" target="_blank" rel="noopener noreffer ">1098-T filing</a>
+for a child. This definition is very broad and includes everything from
+universities to vocational schools.</li>
+</ul>
+<h3 id="lets-choose-an-x-axis-we-intuitively-understand">Let&rsquo;s choose an x-axis we intuitively understand</h3>
+<p>Let&rsquo;s really dig in and see if this is as unintuitive as the
+article makes it seem.  First let&rsquo;s collect centile income data from Raj
+Chetty&rsquo;s <a href="www.equality-of-opportunity.org" rel="">Equality of Opportunity</a>. Since raw
+data of college attendance and quality is not readily avaiable, let&rsquo;s
+reconstruct them off of the graphs in the paper<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+<p>To verify our data, let&rsquo;s first plot College and Attendence vs Rank as the paper does:</p>
+<p><img
+        class="lazyload"
+        src="spranesh.github.io/svg/loading.min.svg"
+        data-src="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1826330590&amp;format=image"
+        data-srcset="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1826330590&amp;format=image, https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1826330590&amp;format=image 1.5x, https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1826330590&amp;format=image 2x"
+        data-sizes="auto"
+        alt="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1826330590&amp;format=image"
+        title="Attendance, Quality vs Rank (Reproduced as in Chetty&rsquo;s paper)" /></p>
+<p>Here&rsquo;s the same chart drawn against actual Income Dollars as opposed to Income
+Rank on the horizontal axis:</p>
+<p><img
+        class="lazyload"
+        src="spranesh.github.io/svg/loading.min.svg"
+        data-src="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=544948064&amp;format=image"
+        data-srcset="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=544948064&amp;format=image, https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=544948064&amp;format=image 1.5x, https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=544948064&amp;format=image 2x"
+        data-sizes="auto"
+        alt="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=544948064&amp;format=image"
+        title="Attendance, Quality vs Income Dollars" /></p>
+<p>This is immediately easier to relate to as the horizontal axis is far more intuitive.
+We all know how much a thousand dollars is (as opposed to an income centile), and
+how hard it is to get a $1000 raise as opposed to how hard it is to get one that will push us
+up by one percentile<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h3 id="what-does-a-percentile-amount-to">What does a percentile amount to?</h3>
+<p>The article states, &ldquo;Moving up a single percentile on the family-income
+distribution makes enrolling in college about 0.7 percentage points more
+likely&rdquo;. That&rsquo;s incredibly hard to wrap my head around. How much is a
+percentile in dollar terms? Again, quoting, &ldquo;About $2,400 in annual
+income separates the bottom two dots, while nearly $1 million separates the top
+two&rdquo;.</p>
+<p>Asking the reader to guess the relationship against <em>Income Rank</em> as opposed to
+<em>Income Dollars</em> is the difference between asking users to draw f(x) against
+log(x) as opposed to x!</p>
+<p>Using the right axes matter!</p>
+<h3 id="are-we-measuring-the-right-thing">Are we measuring the right thing?</h3>
+<p>College quality and attending college only tell part of the story.  What&rsquo;s
+really important is how much these children make when they are older. Chetty,
+Hendren, Klein do collect and present how &ldquo;Family Income of Child at age of 31&rdquo;
+varies with Parent&rsquo;s Income Rank. Here&rsquo;s a Google Sheets rendition of their
+data:</p>
+<p><img
+        class="lazyload"
+        src="spranesh.github.io/svg/loading.min.svg"
+        data-src="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1014863741&amp;format=image"
+        data-srcset="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1014863741&amp;format=image, https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1014863741&amp;format=image 1.5x, https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1014863741&amp;format=image 2x"
+        data-sizes="auto"
+        alt="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=1014863741&amp;format=image"
+        title="Attendance, Quality, Family Income of Child vs Rank" /></p>
+<p>Here&rsquo;s the same data plotted against our preferred horizontal axis of Parent Income Dollars:</p>
+<p><img
+        class="lazyload"
+        src="spranesh.github.io/svg/loading.min.svg"
+        data-src="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=455844899&amp;format=image"
+        data-srcset="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=455844899&amp;format=image, https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=455844899&amp;format=image 1.5x, https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=455844899&amp;format=image 2x"
+        data-sizes="auto"
+        alt="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubchart?oid=455844899&amp;format=image"
+        title="Attendance, Quality, Family Income of Child vs Rank" /></p>
+<p>This graph is far easier to understand! In fact, it begin to tell a story. A
+story of a world where the challenges of pursuing a quality college<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>
+education bottoms out with income, but at the same time, a world where the
+money one is likely to make is directly proportional to the financial resources
+one has growing up.</p>
+<p>If you made it this far,
+<a href="https://docs.google.com/spreadsheets/d/1jD87QN3pPZjoefrAm4E_OR9UD_rjwae9Gd7MbpjjrNs/pubhtml" target="_blank" rel="noopener noreffer ">here&rsquo;s</a>
+the data along with interactive charts. As a bonus,
+<a href="http://thewireless.co.nz/articles/the-pencilsword-on-a-plate" target="_blank" rel="noopener noreffer ">here&rsquo;s</a> a sweet
+treat for you - a Toby Morris comic that tells a similar story.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The entirety of the charm of a you-draw-it-first charm presumably lies in a surprise such as this. With that considered, the surprise isn&rsquo;t that surprising after all.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Yep, my intention was to draw an S curve - but my impatience got the better of me!&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Extrapolation was easy since the paper mentions that college attendance is linear with rank, and college quality is quadratic.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>By college, we really mean an educational institution that had to file a Form 1098-T.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="spranesh.github.io/" target="_blank">Pranesh Srinivasan</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="spranesh.github.io/js/theme.min.js"></script></body>
+</html>

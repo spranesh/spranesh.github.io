@@ -1,0 +1,62 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Software - Tag - Pranesh Srinivasan</title>
+        <link>spranesh.github.io/tags/software/</link>
+        <description>Software - Tag - Pranesh Srinivasan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Sun, 25 Dec 2016 09:26:41 -0800</lastBuildDate><atom:link href="spranesh.github.io/tags/software/" rel="self" type="application/rss+xml" /><item>
+    <title>From Jekyll to Hugo</title>
+    <link>spranesh.github.io/posts/2016-12-25-hugo/</link>
+    <pubDate>Sun, 25 Dec 2016 09:26:41 -0800</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/posts/2016-12-25-hugo/</guid>
+    <description><![CDATA[<p>I&rsquo;ve always used static generators to run my website. They are performant to
+serve, and a good one can provide both flexibility and simplicity at the same
+time.</p>
+<p>My first website (on my <a href="http://www.cse.iitm.ac.in" target="_blank" rel="noopener noreffer ">alma mater&rsquo;s</a> 20MB hosting
+space for every student) used a bunch of perl scripts to shove templates and
+content together. A couple of years ago, when I was forced to move off my
+department&rsquo;s hosting, I stumbled upon Jekyll.</p>]]></description>
+</item>
+<item>
+    <title>The joys of unique_ptr</title>
+    <link>spranesh.github.io/posts/2014-12-30-unique_ptr/</link>
+    <pubDate>Tue, 30 Dec 2014 09:35:41 -0800</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/posts/2014-12-30-unique_ptr/</guid>
+    <description><![CDATA[<p>C++11 introduces
+<a href="http://en.cppreference.com/w/cpp/memory/unique_ptr" target="_blank" rel="noopener noreffer "><code>unique_ptr</code></a> a wonderful
+way to manage the most common pointer use cases without losing sanity. While
+any pointer can point only to one object at a time, the <code>unique_ptr</code> construct
+further enforces only one pointer to the object at any point of time; i.e, a
+bijective mapping between pointers and objects. For example,</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">foo_ptr</span><span class="p">(</span><span class="k">new</span> <span class="n">Foo</span><span class="p">());</span></span></span></code></pre></div></div>
+<p>is equivalent to saying that <code>foo_ptr</code> is the only pointer that points to the
+object we passed into the constructor. The dereference and member access
+methods are overriden so that <code>foo_ptr</code> looks like, sounds like and behaves
+like a normal pointer. One can say <code>*foo_ptr</code> and <code>foo_ptr-&gt;method()</code> as
+expected.  Also being consistent with denoting ownership, a <code>unique_ptr</code>, it
+cannot be copied, only moved.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>]]></description>
+</item>
+<item>
+    <title>My lightweight linux setup</title>
+    <link>spranesh.github.io/posts/2014-07-31-my-linux-setup/</link>
+    <pubDate>Thu, 31 Jul 2014 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/posts/2014-07-31-my-linux-setup/</guid>
+    <description><![CDATA[<!-- image:
+  feature: https://raw.githubusercontent.com/spranesh/customisations/master/screenshot.png -->
+<p>My primary computing device for the last few years has been a 2009 netbook with
+an SU2300 dual core processor, and 2GB memory. I&rsquo;ve managed to keep it up to
+date while being extremely performant and responsive by choosing the right set
+of tools and avoiding software bloat. My entire desktop boots up in less than
+70MB of RAM and is extremely responsive. Here are the various components that
+make up my desktop:</p>]]></description>
+</item>
+</channel>
+</rss>

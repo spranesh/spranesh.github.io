@@ -1,0 +1,63 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Projects - Tag - Pranesh Srinivasan</title>
+        <link>spranesh.github.io/tags/projects/</link>
+        <description>Projects - Tag - Pranesh Srinivasan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><atom:link href="spranesh.github.io/tags/projects/" rel="self" type="application/rss+xml" /><item>
+    <title>Projects</title>
+    <link>spranesh.github.io/projects/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/projects/</guid>
+    <description><![CDATA[<h4 id="google-scholar">Google Scholar</h4>
+<p>My publications are <a href="https://scholar.google.com/citations?user=RQXUtYEAAAAJ" target="_blank" rel="noopener noreffer ">here</a>.</p>
+<h4 id="software">Software</h4>
+<ul>
+<li><a href="http://spranesh.github.io/rl-snake" target="_blank" rel="noopener noreffer ">RL Snake</a> - A snake playing agent trained using reinforcement
+learning - Demos in order of increasing complexity:
+<ul>
+<li><a href="http://spranesh.github.io/rl-snake/plain.gif" target="_blank" rel="noopener noreffer ">Standard game (GIF)</a></li>
+<li><a href="http://spranesh.github.io/rl-snake/middle_wall.gif" target="_blank" rel="noopener noreffer ">Standard game with obstacle (GIF)</a></li>
+<li><a href="http://spranesh.github.io/rl-snake/vertical-maze.gif" target="_blank" rel="noopener noreffer ">Vertical maze (GIF)</a></li>
+</ul>
+</li>
+<li><a href="http://www.github.com/spranesh/redhawk" target="_blank" rel="noopener noreffer ">Redhawk</a>
+<a href="/static/redhawk-standalone-ast-navigation.pdf" rel="">(Master&rsquo;s Thesis)</a> -
+A language agnostic abstract syntax tree based navigation system. Introductory Videos:
+<ul>
+<li>Part 1: <a href="https://www.youtube.com/watch?v=azaXpahrxww" target="_blank" rel="noopener noreffer ">Introduction to the Redhawk navigation tool</a></li>
+<li>Part 2: <a href="https://www.youtube.com/watch?v=rTjIiGfeAT8" target="_blank" rel="noopener noreffer ">Vim and Parallellism</a></li>
+<li>Part 3: <a href="https://www.youtube.com/watch?v=X5w5WTCpoVM" target="_blank" rel="noopener noreffer ">More queries and the Selector Syntax</a></li>
+</ul>
+</li>
+<li><a href="http://www.github.com/spranesh/bristle" target="_blank" rel="noopener noreffer ">Bristle</a> - Making LaTeX Beamer fun again!</li>
+<li><a href="http://www.github.com/spranesh/newsline" target="_blank" rel="noopener noreffer ">Newsline</a> - A fundamentally new
+causal way to look at news stories.</li>
+<li>Smile - A semantic analysis tool written from the ground up.</li>
+<li><a href="http://spranesh.github.io/mcmg" target="_blank" rel="noopener noreffer ">MCMG</a> - A Markov chain based Music Generator (for the Mohanam Raga).</li>
+<li>SimpleBot - A simple IRC bot.</li>
+<li><a href="http://www.github.com/spranesh/cashman" target="_blank" rel="noopener noreffer ">Cashman</a> - Manage who owes who how much.</li>
+</ul>
+<h4 id="talks">Talks</h4>
+<ul>
+<li><a href="/static/talks/intro_to_haskell.pdf" rel="">Introduction to Haskell (pdf)</a>
+<a href="/static/talks/intro_to_haskell_resources.tar.gz" rel="">(resources)</a> -
+Google Hyderabad Tech Talk, June 2010</li>
+<li><a href="/static/talks/hack_the_what.pdf" rel="">Hack the what (pdf)</a> -
+IIT Madras 2010 Hackfest Keynote</li>
+<li><a href="/static/talks/intro_to_python.pdf" rel="">Introduction to Python (pdf)</a> -
+IIT Madras Linux Users Group 2010</li>
+<li><a href="/static/talks/vim_zen.pdf" rel="">The zen of Vim editing (pdf)</a> -
+IIT Madras Linux Users Group 2010</li>
+</ul>
+<h4 id="writings">Writings</h4>
+<ul>
+<li><a href="http://linuxgazette.net/152/srinivasan.html" target="_blank" rel="noopener noreffer ">A slightly advanced introduction to vim</a> - Linux Gazette 2008. Translated into
+<a href="ftp://ftp.traduc.org/pub/lgazette/html/2008/152/lg152-C.html" target="_blank" rel="noopener noreffer ">French</a></li>
+<li><a href="https://drive.google.com/open?id=16Meqy9BCmp2kKMXP7ry0-zM_bYIvvemhISzp2y-ZYFBKbcsKNAG5AbGcg-Bkcw6Ekn3o_-NLd0K18UgP" target="_blank" rel="noopener noreffer ">On programming interviews (pdf)</a></li>
+<li><a href="https://drive.google.com/open?id=1vaEVIahDDzYE4UGLsQnSOs6nsIjxpeCq7ioaQRe5eD4GLMCMWRoDJHAIJbqX20Zx820Xul1Ecjl3WJ6U" target="_blank" rel="noopener noreffer ">Investing and financial independence for engineers (pdf)</a></li>
+</ul>]]></description>
+</item>
+</channel>
+</rss>

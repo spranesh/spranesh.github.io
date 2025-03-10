@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>The joys of unique_ptr - Pranesh Srinivasan</title><meta name="Description" content="Pranesh Srinivasan&#39;s Blog"><meta property="og:url" content="spranesh.github.io/posts/2014-12-30-unique_ptr/">
+  <meta property="og:site_name" content="Pranesh Srinivasan">
+  <meta property="og:title" content="The joys of unique_ptr">
+  <meta property="og:description" content="C&#43;&#43;11 introduces unique_ptr a wonderful way to manage the most common pointer use cases without losing sanity. While any pointer can point only to one object at a time, the unique_ptr construct further enforces only one pointer to the object at any point of time; i.e, a bijective mapping between pointers and objects. For example,
+std::unique_ptr&lt;Foo&gt; foo_ptr(new Foo()); is equivalent to saying that foo_ptr is the only pointer that points to the object we passed into the constructor. The dereference and member access methods are overriden so that foo_ptr looks like, sounds like and behaves like a normal pointer. One can say *foo_ptr and foo_ptr-&gt;method() as expected. Also being consistent with denoting ownership, a unique_ptr, it cannot be copied, only moved.1">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2014-12-30T09:35:41-08:00">
+    <meta property="article:modified_time" content="2014-12-30T09:35:41-08:00">
+    <meta property="article:tag" content="Software">
+    <meta property="og:image" content="/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/logo.png">
+  <meta name="twitter:title" content="The joys of unique_ptr">
+  <meta name="twitter:description" content="C&#43;&#43;11 introduces unique_ptr a wonderful way to manage the most common pointer use cases without losing sanity. While any pointer can point only to one object at a time, the unique_ptr construct further enforces only one pointer to the object at any point of time; i.e, a bijective mapping between pointers and objects. For example,
+std::unique_ptr&lt;Foo&gt; foo_ptr(new Foo()); is equivalent to saying that foo_ptr is the only pointer that points to the object we passed into the constructor. The dereference and member access methods are overriden so that foo_ptr looks like, sounds like and behaves like a normal pointer. One can say *foo_ptr and foo_ptr-&gt;method() as expected. Also being consistent with denoting ownership, a unique_ptr, it cannot be copied, only moved.1">
+<meta name="application-name" content="Pranesh Srinivasan">
+<meta name="apple-mobile-web-app-title" content="Pranesh Srinivasan"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="spranesh.github.io/posts/2014-12-30-unique_ptr/" /><link rel="prev" href="spranesh.github.io/posts/2014-07-31-my-linux-setup/" /><link rel="next" href="spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/" /><link rel="stylesheet" href="spranesh.github.io/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "The joys of unique_ptr",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "spranesh.github.io\/posts\/2014-12-30-unique_ptr\/"
+        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "software","wordcount":  850 ,
+        "url": "spranesh.github.io\/posts\/2014-12-30-unique_ptr\/","datePublished": "2014-12-30T09:35:41-08:00","dateModified": "2014-12-30T09:35:41-08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Pranesh Srinivasan"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="spranesh.github.io/" title="Pranesh Srinivasan"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/spranesh.github.io/about/"> About </a><a class="menu-item" href="/spranesh.github.io/interests/"> Interests </a><a class="menu-item" href="/spranesh.github.io/projects/"> Projects </a><a class="menu-item" href="/spranesh.github.io/posts/"> Blog </a><a class="menu-item" href="/spranesh.github.io"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="spranesh.github.io/" title="Pranesh Srinivasan"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/spranesh.github.io/about/" title="">About</a><a class="menu-item" href="/spranesh.github.io/interests/" title="">Interests</a><a class="menu-item" href="/spranesh.github.io/projects/" title="">Projects</a><a class="menu-item" href="/spranesh.github.io/posts/" title="">Blog</a><a class="menu-item" href="/spranesh.github.io" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">The joys of unique_ptr</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="spranesh.github.io/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Pranesh Srinivasan</a></span>&nbsp;<span class="post-category">included in <a href="spranesh.github.io/categories/programming/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Programming</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2014-12-30">2014-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;850 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#return-values-work-as-expected">Return values work as expected</a></li>
+        <li><a href="#ownership-is-made-explicit">Ownership is made explicit</a></li>
+        <li><a href="#usage-with-containers">Usage with containers</a></li>
+        <li><a href="#the-headfake">The headfake</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>C++11 introduces
+<a href="http://en.cppreference.com/w/cpp/memory/unique_ptr" target="_blank" rel="noopener noreffer "><code>unique_ptr</code></a> a wonderful
+way to manage the most common pointer use cases without losing sanity. While
+any pointer can point only to one object at a time, the <code>unique_ptr</code> construct
+further enforces only one pointer to the object at any point of time; i.e, a
+bijective mapping between pointers and objects. For example,</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">foo_ptr</span><span class="p">(</span><span class="k">new</span> <span class="n">Foo</span><span class="p">());</span></span></span></code></pre></div></div>
+<p>is equivalent to saying that <code>foo_ptr</code> is the only pointer that points to the
+object we passed into the constructor. The dereference and member access
+methods are overriden so that <code>foo_ptr</code> looks like, sounds like and behaves
+like a normal pointer. One can say <code>*foo_ptr</code> and <code>foo_ptr-&gt;method()</code> as
+expected.  Also being consistent with denoting ownership, a <code>unique_ptr</code>, it
+cannot be copied, only moved.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>In short, a <code>unique_ptr</code> is</p>
+<ul>
+<li>cheap since it has very minimal overhead</li>
+<li>lightweight as it does not need to reference count (an object can only have
+one valid unique pointer at any point of time)</li>
+<li>and avoids memory leaks since it automatically frees the owned raw pointer when it goes
+out of scope via the destructor.</li>
+</ul>
+<p>Even more useful, I think, is that they constrain ownership thereby avoiding the
+reader to reference count<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> as she reads through the code.</p>
+<h3 id="return-values-work-as-expected">Return values work as expected</h3>
+<p>The trick to using, understanding and writing effective code with <code>unique_ptr</code>s
+is to realize that a lot of moving happens under the hood. Copying or assigning
+a unique pointer is disallowed, but (roughly speaking), the new C++11 move
+semantics automatically kick in for rvalue copys.</p>
+<p>As a result, returning unique pointers work as expected since C++ move
+semantics converts the rvalue copy into a move:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">FooFactory</span><span class="p">(</span><span class="n">ConfigObject</span> <span class="n">C</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">foo_ptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">foo_ptr</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="k">new</span> <span class="n">Foo</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// read config object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="c1">// set desired properties on Foo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">return</span> <span class="n">foo</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">foo_ptr</span> <span class="o">=</span> <span class="n">FooFactory</span><span class="p">(</span><span class="n">ConfigObject</span><span class="p">());</span> <span class="c1">// Works!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></div></div>
+<h3 id="ownership-is-made-explicit">Ownership is made explicit</h3>
+<p>When a function accepts a pointer, questions of ownership arise. For
+instance, imagine a function</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ColorifyFoo</span><span class="p">(</span><span class="n">Foo</span><span class="o">*</span> <span class="n">uncolored_foo</span><span class="p">);</span></span></span></code></pre></div></div>
+<p>Without peeking into the definition of ColorifyFoo, it is difficult to say if
+ColorifyFoo were to own the pointer. It gets even more difficult to predict if
+this were a class:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FooColorifier</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">FooColorifier</span><span class="p">(</span><span class="n">Foo</span> <span class="o">*</span><span class="n">uncolored_foo</span><span class="p">);</span> <span class="c1">// Is uncolored_foo owned?
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span></span></span></code></pre></div></div>
+<p>It is almost impossible to tell whether the FooColorifier class owns foo
+without looking into what the class does with it. This is where unique pointers
+shine. They explicitly prohibit such call sites! Trying to call a
+unique_pointer version of the above function:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ColorifyFoo</span><span class="p">(</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">uncolored_foo</span><span class="p">);</span></span></span></code></pre></div></div>
+<p>in a manner like the following:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">foo_ptr</span><span class="p">(</span><span class="k">new</span> <span class="n">Foo</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="n">ColorifyFoo</span><span class="p">(</span><span class="n">foo_ptr</span><span class="p">);</span>  <span class="c1">// compiler error!
+</span></span></span></code></pre></div></div>
+<p>would throw up a compiler error! One would have to explicitly move the pointer by calling it such:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ColorifyFoo</span><span class="p">(</span><span class="n">move</span><span class="p">(</span><span class="n">foo_ptr</span><span class="p">));</span>  <span class="c1">// works!
+</span></span></span><span class="line"><span class="cl"><span class="c1">// now foo_ptr is NULL
+</span></span></span></code></pre></div></div>
+<p>This makes ownership clear to the reader! Of course, if you only wanted to pass a reference to ColorifyFoo so that the pointer is not moved, you should, as you guessed right, pass a reference:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ReferenceVersionOfColorifyFoo</span><span class="p">(</span><span class="k">const</span> <span class="n">Foo</span><span class="o">&amp;</span> <span class="n">uncolored_foo</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// callsite like the following:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">foo_ptr</span><span class="p">(</span><span class="k">new</span> <span class="n">Foo</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="n">ReferenceVersionOfColorifyFoo</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">foo_ptr</span><span class="p">));</span></span></span></code></pre></div></div>
+<h3 id="usage-with-containers">Usage with containers</h3>
+<p>Allowing containers to use pointers to their data rather than objects
+themselves can significantly increase the speed of move-heavy operations like
+sorting<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. However, just using containers with raw pointers is unsafe in
+terms of memory. For instance, passing said containers around leads to keeping
+track of who owns the container to appropriately manage said memory.</p>
+<p>Due to rvalue references and move semantics, C++11 enables <code>unique_ptr</code> to be
+effortlessly used with containers. This is where they go above and beyond
+<code>auto_ptr</code>. Their usage with containers is as expected:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-chevron-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;&gt;</span> <span class="n">vector_of_foos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">foo_ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">vector_of_foos</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">foo_ptr</span><span class="p">);</span>  <span class="c1">// Throws compiler error!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">vector_of_foos</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">move</span><span class="p">(</span><span class="n">foo_ptr</span><span class="p">));</span>  <span class="c1">// Works!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">vector_of_foos</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="k">new</span> <span class="n">Foo</span><span class="p">());</span>  <span class="c1">// Also works!
+</span></span></span></code></pre></div></div>
+<p>Move-heavy operations like <code>sort</code>, <code>shuffle</code> and <code>reverse</code> can really benefit
+(sometimes even upto
+<a href="http://eli.thegreenplace.net/2012/06/20/c11-using-unique_ptr-with-standard-library-containers" target="_blank" rel="noopener noreffer ">10x</a>)
+via a judicious use of <code>unique_ptr</code>.</p>
+<h3 id="the-headfake">The headfake</h3>
+<p>In reality, the <code>unique_ptr</code> is actually a very good
+<a href="http://en.wikipedia.org/wiki/Head_fake" target="_blank" rel="noopener noreffer ">headfake</a>. Sure, they help manage
+memory, but their real benefit is for the reader<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>! Consistent usage of
+<code>unique_ptr</code> makes ownership extremely clear.</p>
+<p>Pointers have historically been semantically overloaded to handle both
+ownership as well as cheap read copies.  Separating the two use cases by the
+usage of <code>unique_ptr</code><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> to serve ownership and the usage of const references
+to allow for cheap read copies removes the ambiguity and improves
+programmer-read time. Programmer-read time is, of course, the most important time
+constraint of all!</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>None of this is radically new. <code>auto_ptr</code> was the first attempt at thinking about RIAA pointer semantics, but it did not work well with containers. C++11 fixes this with the addition of move semantics.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>I&rsquo;ve often joked that readers of programs have to have execution models simultaneously operating in their heads. With programming languages that do not automatically manage memory such as C / C++, they also need to reference count pointers and references. IMO, this is the source of the increased programmer productivity that Spolsky refers to in his <a href="http://www.joelonsoftware.com/articles/APIWar.html" target="_blank" rel="noopener noreffer ">API War</a> post.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>And by a smaller amount, even lookup operations like searches due to cache coherence.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>One of the most frequently recurring readers is often a future version of the author!&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>And it&rsquo;s sibling <code>shared_ptr</code> for the multiple ownership case.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2014-12-30</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="spranesh.github.io/posts/2014-12-30-unique_ptr/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr" data-hashtags="software"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-hashtag="software"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=spranesh.github.io%2fposts%2f2014-12-30-unique_ptr%2f&amp;text=The%20joys%20of%20unique_ptr" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="spranesh.github.io/tags/software/">Software</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="spranesh.github.io/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="spranesh.github.io/posts/2014-07-31-my-linux-setup/" class="prev" rel="prev" title="My lightweight linux setup"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>My lightweight linux setup</a>
+            <a href="spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/" class="next" rel="next" title="The decision-outcome matrix">The decision-outcome matrix<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="spranesh.github.io/" target="_blank">Pranesh Srinivasan</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="spranesh.github.io/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Xmonad - Tag - Pranesh Srinivasan</title>
+        <link>spranesh.github.io/tags/xmonad/</link>
+        <description>Xmonad - Tag - Pranesh Srinivasan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 31 Jul 2014 00:00:00 &#43;0000</lastBuildDate><atom:link href="spranesh.github.io/tags/xmonad/" rel="self" type="application/rss+xml" /><item>
+    <title>My lightweight linux setup</title>
+    <link>spranesh.github.io/posts/2014-07-31-my-linux-setup/</link>
+    <pubDate>Thu, 31 Jul 2014 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/posts/2014-07-31-my-linux-setup/</guid>
+    <description><![CDATA[<!-- image:
+  feature: https://raw.githubusercontent.com/spranesh/customisations/master/screenshot.png -->
+<p>My primary computing device for the last few years has been a 2009 netbook with
+an SU2300 dual core processor, and 2GB memory. I&rsquo;ve managed to keep it up to
+date while being extremely performant and responsive by choosing the right set
+of tools and avoiding software bloat. My entire desktop boots up in less than
+70MB of RAM and is extremely responsive. Here are the various components that
+make up my desktop:</p>]]></description>
+</item>
+</channel>
+</rss>

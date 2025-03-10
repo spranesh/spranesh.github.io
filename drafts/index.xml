@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drafts on Pranesh Srinivasan</title>
+    <link>spranesh.github.io/drafts/</link>
+    <description>Recent content in Drafts on Pranesh Srinivasan</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
+    <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster>
+    <lastBuildDate>Thu, 28 May 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="spranesh.github.io/drafts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Choosing intuitive axes</title>
+      <link>spranesh.github.io/drafts/2015-05-28-intuitive-axes/</link>
+      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate><author>spranesh@gmail.com (Pranesh Srinivasan)</author>
+      <guid>spranesh.github.io/drafts/2015-05-28-intuitive-axes/</guid>
+      <description>&lt;p&gt;Earlier today, the New York times &lt;a href=&#34;http://nyti.ms/1LLH6ml&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;published&lt;/a&gt; a&#xA;wonderful visualization on how family income affects children&amp;rsquo;s college&#xA;chances. The visualization uses a new you-draw-it-first paradigm, where the&#xA;reader guesses the expected relationship / trend before being shown the actual&#xA;data. I found the idea very cool. Go ahead and try it, I&amp;rsquo;ll wait.  It&amp;rsquo;s easy to&#xA;see why this is easily one of my favourite NY Times visualizations ever.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What&#39;s the rationale behind power cuts?</title>
+      <link>spranesh.github.io/drafts/2014-08-07-whats-the-rationale-behind-power-cuts/</link>
+      <pubDate>Thu, 07 Aug 2014 00:00:00 +0000</pubDate><author>spranesh@gmail.com (Pranesh Srinivasan)</author>
+      <guid>spranesh.github.io/drafts/2014-08-07-whats-the-rationale-behind-power-cuts/</guid>
+      <description>&lt;p&gt;I found to my horror earlier this week that, everyday, there are 4 hours of&#xA;power cuts in Hyderabad. These are generally scheduled and occur in 2 batches&#xA;of 2 hours each. This particular week seems to have had awry timings and&#xA;durations via unscheduled power cuts.&lt;/p&gt;&#xA;&lt;p&gt;Anyway, why power cuts&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, and why unscheduled? The old rationale seems to be to&#xA;ration power to match supply. I&amp;rsquo;m not entirely convinced by this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The true cost of renting</title>
+      <link>spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</link>
+      <pubDate>Thu, 24 Jul 2014 00:00:00 +0000</pubDate><author>spranesh@gmail.com (Pranesh Srinivasan)</author>
+      <guid>spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</guid>
+      <description>&lt;script type=&#34;text/javascript&#34;&gt;&#xA;&#xA;function GetBonusMessage(extra) {&#xA;     var item = &#34;&#34;;&#xA;     if( extra &gt; 150000 )&#xA;        item = &#34;a european vacation&#34;;&#xA;     else if( extra &gt; 100000 )&#xA;        item = &#34;a used hatchback&#34;;&#xA;     else if( extra &gt; 70000 )&#xA;        item = &#34;a very good two wheeler&#34;;&#xA;     else if( extra &gt; 50000 )&#xA;        item = &#34;a home theatre system&#34;;&#xA;     else if ( extra &gt; 40000 )&#xA;        item = &#34;the best camera phone that currently exists&#34;;&#xA;     else if ( extra &gt; 30000 )&#xA;        item = &#34;a top choice entry-level DSLR camera&#34;;&#xA;     else if ( extra &gt; 20000 )&#xA;        item = &#34;a top of the line smartphone&#34;;&#xA;     else if ( extra &gt; 10000 )&#xA;        item = &#34;a fairly good smartphone&#34;;&#xA;     else if ( extra &gt; 5000 )&#xA;        item = &#34;return tickets for a domestic flight (if you book early)&#34;;&#xA;     else if ( extra &gt; 2000 )&#xA;        item = &#34;a spa package&#34;;&#xA;&#xA;     if ( item != &#34;&#34; )&#xA;     {&#xA;        var bonus_msg = &#34;&lt;b&gt;Bonus&lt;/b&gt;: To put that in perspective, the amount you would save during your whole tenure, &#34;;&#xA;        bonus_msg    += &#34;Rs. &lt;span class=net-extra-for-tenure&gt;&lt;/span&gt; could buy you &#34; + item +&#34;.&#34;; &#xA;        return bonus_msg;&#xA;     }&#xA;     return &#34;&#34;;&#xA;}&#xA;&#xA;function CalculateTrueCost() {&#xA;     $( &#34;#analysis&#34; ).hide();&#xA;&#xA;&#xA;     var interest      = 0.06;&#xA;&#xA;     var broker_months = 1.0 * ( $( &#34;#broker-used&#34; ).is(&#34;:checked&#34;) ? 1 : 0 );&#xA;     var tenure          = parseFloat( $( &#34;#months-rented&#34; ).val() );&#xA;     var advance         = parseFloat( $( &#34;#months-advance&#34; ).val() );&#xA;     var painting_charge = parseFloat( $( &#34;#painting-charges&#34; ).val() );&#xA;     var monthly_rent    = parseFloat( $( &#34;#monthly-rent&#34; ).val() );&#xA;&#xA;     $( &#34;.tenure&#34; ).html( tenure.toFixed( 1 ) );&#xA;&#xA;     var broker_charge &#x9;       = broker_months * monthly_rent;&#xA;     var deposit_interest      = monthly_rent * tenure / 12 * advance * interest;&#xA;     var net_extra_for_tenure  = broker_charge + deposit_interest + painting_charge;&#xA;     var net_extra_per_month   = net_extra_for_tenure / tenure;&#xA;     var net_extra_percentage  = net_extra_per_month / monthly_rent * 100;&#xA;&#xA;     // display Bonus first to fill in numbers inside the bonus.&#xA;     $( &#34;#bonus&#34; ).html( GetBonusMessage( net_extra_for_tenure ) );&#xA;&#xA;     $( &#34;.deposit-interest&#34; ).html( deposit_interest.toFixed( 0 ));&#xA;     $( &#34;.painting-charge&#34; ).html( painting_charge.toFixed( 0 ) );&#xA;     $( &#34;.broker-charge&#34; ).html( broker_charge.toFixed( 0 ) );&#xA;     $( &#34;.painting-broker&#34; ).html( (painting_charge + broker_charge ).toFixed( 0 ) );&#xA;&#xA;     $( &#34;.net-extra-for-tenure&#34; ).html( net_extra_for_tenure.toFixed( 0 ) );&#xA;     $( &#34;.net-extra-percentage&#34; ).html( net_extra_percentage.toFixed( 2 ) );&#xA;     $( &#34;.net-extra-per-month&#34; ).html( net_extra_per_month.toFixed(0) );&#xA;     $( &#34;.true-rent&#34; ).html( ( net_extra_per_month + monthly_rent ).toFixed( 0 ) );&#xA;&#xA;     $( &#34;#analysis&#34; ).show( &#34;slow&#34; );&#xA;      return false;&#xA;};&#xA;&lt;/script&gt;&#xA;&lt;p&gt;Ever since I read about &lt;a href=&#34;http://www.investopedia.com/articles/pf/08/cost-car-ownership.asp&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;the true cost of owning a&#xA;car&lt;/a&gt;, I&amp;rsquo;ve&#xA;generally thought about the true all-in costs of things &amp;ndash; a phone plan, a&#xA;housing loan, running a hypothetical &lt;em&gt;chai&lt;/em&gt; shop, etc.. While I pursue this&#xA;train of thought for purely intellectual purposes, it sometimes leads to&#xA;conclusions that I find surprising.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

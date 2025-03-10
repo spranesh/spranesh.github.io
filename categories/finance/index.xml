@@ -1,0 +1,157 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Finance - Category - Pranesh Srinivasan</title>
+        <link>spranesh.github.io/categories/finance/</link>
+        <description>Finance - Category - Pranesh Srinivasan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 22 Oct 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="spranesh.github.io/categories/finance/" rel="self" type="application/rss+xml" /><item>
+    <title>Why equities?</title>
+    <link>spranesh.github.io/posts/2015-10-22-why-equities/</link>
+    <pubDate>Thu, 22 Oct 2015 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/posts/2015-10-22-why-equities/</guid>
+    <description><![CDATA[<p>In this post, we look at long-term inflation adjust returns across six
+different asset classes - cash, residential housing, gold, industrial
+commodities, bonds, and stocks (equities). By long-term, we mean at least a
+century or more.</p>
+<p>In doing so, we shall find that equity ownership in cash flow producing
+businesses via stocks outperform all other categories.  All charts in this post
+deal with real returns - i.e, returns adjusted for inflation.</p>]]></description>
+</item>
+<item>
+    <title>The rule of 72 - why it works and when</title>
+    <link>spranesh.github.io/posts/2015-09-10-rule-of-72/</link>
+    <pubDate>Thu, 10 Sep 2015 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/posts/2015-09-10-rule-of-72/</guid>
+    <description><![CDATA[<!-- hack for removing extra bullets from ToC -->
+<style>
+#TableOfContents ul { 
+  list-style-type: none; 
+}
+
+#TableOfContents ul ul { 
+  list-style-type: none; 
+}
+
+#TableOfContents ul ul ul { 
+  list-style-type: disc; 
+} 
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['++','++'] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<h3 id="what-is-the-rule-of-72">What is the rule of 72</h3>
+<p>The well known rule of ++72++ estimates the time it takes for an investment to
+double with compounding. Simply put it states, that if an investment has a
+return of ++r++% year on year, the investment will double in roughly
+++\frac{72}{r}++ years. Combined with basic knowledge of compounding, the rule
+is both simple and useful enough to perform a number of wide variety of
+approximations without having to use a calculator. Let us run through two
+illustrative examples:</p>]]></description>
+</item>
+<item>
+    <title>If you could only read 2 pages on investing</title>
+    <link>spranesh.github.io/posts/2015-06-28-only-2-pages-on-investing/</link>
+    <pubDate>Sun, 28 Jun 2015 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/posts/2015-06-28-only-2-pages-on-investing/</guid>
+    <description><![CDATA[<p>Over the last few years, I&rsquo;ve spent significant time reading Buffet&rsquo;s annual
+letters, Security Analysis (Graham &amp; Dodd), and listening to people like Tom
+Geyner (of Markel Capital) talk about their steadfast principles. I was
+recently asked by a friend if I could pick a 2 page summary.  Without sparing
+it much thought, I answered in the negative. How could anything less than 3<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+books expound the mere basics of what makes an asset?</p>]]></description>
+</item>
+<item>
+    <title>The true cost of renting</title>
+    <link>spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</link>
+    <pubDate>Thu, 24 Jul 2014 00:00:00 &#43;0000</pubDate>
+    <author>Pranesh Srinivasan</author>
+    <guid>spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</guid>
+    <description><![CDATA[<script type="text/javascript">
+
+function GetBonusMessage(extra) {
+     var item = "";
+     if( extra > 150000 )
+        item = "a european vacation";
+     else if( extra > 100000 )
+        item = "a used hatchback";
+     else if( extra > 70000 )
+        item = "a very good two wheeler";
+     else if( extra > 50000 )
+        item = "a home theatre system";
+     else if ( extra > 40000 )
+        item = "the best camera phone that currently exists";
+     else if ( extra > 30000 )
+        item = "a top choice entry-level DSLR camera";
+     else if ( extra > 20000 )
+        item = "a top of the line smartphone";
+     else if ( extra > 10000 )
+        item = "a fairly good smartphone";
+     else if ( extra > 5000 )
+        item = "return tickets for a domestic flight (if you book early)";
+     else if ( extra > 2000 )
+        item = "a spa package";
+
+     if ( item != "" )
+     {
+        var bonus_msg = "<b>Bonus</b>: To put that in perspective, the amount you would save during your whole tenure, ";
+        bonus_msg    += "Rs. <span class=net-extra-for-tenure></span> could buy you " + item +"."; 
+        return bonus_msg;
+     }
+     return "";
+}
+
+function CalculateTrueCost() {
+     $( "#analysis" ).hide();
+
+
+     var interest      = 0.06;
+
+     var broker_months = 1.0 * ( $( "#broker-used" ).is(":checked") ? 1 : 0 );
+     var tenure          = parseFloat( $( "#months-rented" ).val() );
+     var advance         = parseFloat( $( "#months-advance" ).val() );
+     var painting_charge = parseFloat( $( "#painting-charges" ).val() );
+     var monthly_rent    = parseFloat( $( "#monthly-rent" ).val() );
+
+     $( ".tenure" ).html( tenure.toFixed( 1 ) );
+
+     var broker_charge 	       = broker_months * monthly_rent;
+     var deposit_interest      = monthly_rent * tenure / 12 * advance * interest;
+     var net_extra_for_tenure  = broker_charge + deposit_interest + painting_charge;
+     var net_extra_per_month   = net_extra_for_tenure / tenure;
+     var net_extra_percentage  = net_extra_per_month / monthly_rent * 100;
+
+     // display Bonus first to fill in numbers inside the bonus.
+     $( "#bonus" ).html( GetBonusMessage( net_extra_for_tenure ) );
+
+     $( ".deposit-interest" ).html( deposit_interest.toFixed( 0 ));
+     $( ".painting-charge" ).html( painting_charge.toFixed( 0 ) );
+     $( ".broker-charge" ).html( broker_charge.toFixed( 0 ) );
+     $( ".painting-broker" ).html( (painting_charge + broker_charge ).toFixed( 0 ) );
+
+     $( ".net-extra-for-tenure" ).html( net_extra_for_tenure.toFixed( 0 ) );
+     $( ".net-extra-percentage" ).html( net_extra_percentage.toFixed( 2 ) );
+     $( ".net-extra-per-month" ).html( net_extra_per_month.toFixed(0) );
+     $( ".true-rent" ).html( ( net_extra_per_month + monthly_rent ).toFixed( 0 ) );
+
+     $( "#analysis" ).show( "slow" );
+      return false;
+};
+</script>
+<p>Ever since I read about <a href="http://www.investopedia.com/articles/pf/08/cost-car-ownership.asp" target="_blank" rel="noopener noreffer ">the true cost of owning a
+car</a>, I&rsquo;ve
+generally thought about the true all-in costs of things &ndash; a phone plan, a
+housing loan, running a hypothetical <em>chai</em> shop, etc.. While I pursue this
+train of thought for purely intellectual purposes, it sometimes leads to
+conclusions that I find surprising.</p>]]></description>
+</item>
+</channel>
+</rss>
