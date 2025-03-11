@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Projects - Tag - Pranesh Srinivasan</title>
-        <link>http://spranesh.github.io/tags/projects/</link>
+        <link>http://pranesh.srinivasan.blog/tags/projects/</link>
         <description>Projects - Tag - Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><atom:link href="http://spranesh.github.io/tags/projects/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><atom:link href="http://pranesh.srinivasan.blog/tags/projects/" rel="self" type="application/rss+xml" /><item>
     <title>Projects</title>
-    <link>http://spranesh.github.io/projects/</link>
+    <link>http://pranesh.srinivasan.blog/projects/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/projects/</guid>
+    <guid>http://pranesh.srinivasan.blog/projects/</guid>
     <description><![CDATA[<h4 id="google-scholar">Google Scholar</h4>
 <p>My publications are <a href="https://scholar.google.com/citations?user=RQXUtYEAAAAJ" target="_blank" rel="noopener noreffer ">here</a>.</p>
 <h4 id="software">Software</h4>

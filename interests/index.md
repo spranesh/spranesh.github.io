@@ -3,12 +3,19 @@
 
 #### Music
 
-My musical journey took an unexpected turn in college, where I began formal
-Carnatic music training. Though my initial steps were on the violin, guided by
-Ms. Sowmya (a student of Kanyakumari), I found my true passion in fretted
-instruments. Under the tutelage of Guru Shrinidhi Hemmige, I explored the
-intricacies of Carnatic guitar, fueled by the captivating sounds of Mandolin U
-Srinivas and Guitar R Prasanna, whose artistry continues to inspire me.
+Music, in almost any form, brings me joy. But I'm especially drawn to the
+spontaneous creativity of improvisational music, particularly jazz and Indian
+classical. I'm also actively learning [Carnatic
+music](https://en.wikipedia.org/wiki/Carnatic_music) on the guitar and
+mandolin, though I'm still very much a beginner.
+
+
+While I grew up listening to music, I did not formally learn until my college
+days.  My initial steps were on the violin, guided by Ms. Sowmya (a student of
+Kanyakumari), I found my true passion in fretted instruments. Under the
+tutelage of Guru Shrinidhi Hemmige, I explored the intricacies of Carnatic
+guitar, fueled by the captivating sounds of Mandolin U Srinivas and Guitar R
+Prasanna, whose artistry continues to inspire me.
 
 I own several electric guitars and an electric 4-string mandolin.
 

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Hindsight - Tag - Pranesh Srinivasan</title>
-        <link>http://spranesh.github.io/tags/hindsight/</link>
+        <link>http://pranesh.srinivasan.blog/tags/hindsight/</link>
         <description>Hindsight - Tag - Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 19 Feb 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://spranesh.github.io/tags/hindsight/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 19 Feb 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://pranesh.srinivasan.blog/tags/hindsight/" rel="self" type="application/rss+xml" /><item>
     <title>The decision-outcome matrix</title>
-    <link>http://spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/</link>
+    <link>http://pranesh.srinivasan.blog/posts/2015-02-19-the-decision-outcome-matrix/</link>
     <pubDate>Thu, 19 Feb 2015 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/</guid>
+    <guid>http://pranesh.srinivasan.blog/posts/2015-02-19-the-decision-outcome-matrix/</guid>
     <description><![CDATA[<p>Consider any decision that can either be <em>taken</em> or <em>not taken</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and the outcome of this decision
 to either be <em>good</em> or <em>bad</em><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
 <table class="table table-bordered table-striped">

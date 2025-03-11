@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Blog - Tag - Pranesh Srinivasan</title>
-        <link>http://spranesh.github.io/tags/blog/</link>
+        <link>http://pranesh.srinivasan.blog/tags/blog/</link>
         <description>Blog - Tag - Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 01 May 2014 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://spranesh.github.io/tags/blog/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 01 May 2014 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://pranesh.srinivasan.blog/tags/blog/" rel="self" type="application/rss+xml" /><item>
     <title>Archive</title>
-    <link>http://spranesh.github.io/posts/</link>
+    <link>http://pranesh.srinivasan.blog/posts/</link>
     <pubDate>Thu, 01 May 2014 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/posts/</guid>
+    <guid>http://pranesh.srinivasan.blog/posts/</guid>
     <description><![CDATA[<h1 id="archive">Archive</h1>]]></description>
 </item>
 </channel>

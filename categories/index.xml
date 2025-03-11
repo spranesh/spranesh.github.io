@@ -1,63 +1,63 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - Category - Pranesh Srinivasan</title>
-        <link>http://spranesh.github.io/categories/</link>
+        <link>http://pranesh.srinivasan.blog/categories/</link>
         <description>Categories - Category - Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Mon, 06 Apr 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://spranesh.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Mon, 06 Apr 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://pranesh.srinivasan.blog/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Investing</title>
-    <link>http://spranesh.github.io/categories/investing/</link>
+    <link>http://pranesh.srinivasan.blog/categories/investing/</link>
     <pubDate>Mon, 06 Apr 2020 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/categories/investing/</guid>
+    <guid>http://pranesh.srinivasan.blog/categories/investing/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Psychology</title>
-    <link>http://spranesh.github.io/categories/psychology/</link>
+    <link>http://pranesh.srinivasan.blog/categories/psychology/</link>
     <pubDate>Sun, 04 Jun 2017 10:30:52 -0700</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/categories/psychology/</guid>
+    <guid>http://pranesh.srinivasan.blog/categories/psychology/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Programming</title>
-    <link>http://spranesh.github.io/categories/programming/</link>
+    <link>http://pranesh.srinivasan.blog/categories/programming/</link>
     <pubDate>Sun, 25 Dec 2016 09:26:41 -0800</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/categories/programming/</guid>
+    <guid>http://pranesh.srinivasan.blog/categories/programming/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Finance</title>
-    <link>http://spranesh.github.io/categories/finance/</link>
+    <link>http://pranesh.srinivasan.blog/categories/finance/</link>
     <pubDate>Thu, 22 Oct 2015 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/categories/finance/</guid>
+    <guid>http://pranesh.srinivasan.blog/categories/finance/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Data</title>
-    <link>http://spranesh.github.io/categories/data/</link>
+    <link>http://pranesh.srinivasan.blog/categories/data/</link>
     <pubDate>Thu, 28 May 2015 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/categories/data/</guid>
+    <guid>http://pranesh.srinivasan.blog/categories/data/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Hmm</title>
-    <link>http://spranesh.github.io/categories/hmm/</link>
+    <link>http://pranesh.srinivasan.blog/categories/hmm/</link>
     <pubDate>Thu, 07 Aug 2014 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/categories/hmm/</guid>
+    <guid>http://pranesh.srinivasan.blog/categories/hmm/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Food</title>
-    <link>http://spranesh.github.io/categories/food/</link>
+    <link>http://pranesh.srinivasan.blog/categories/food/</link>
     <pubDate>Thu, 17 Jul 2014 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>http://spranesh.github.io/categories/food/</guid>
+    <guid>http://pranesh.srinivasan.blog/categories/food/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
