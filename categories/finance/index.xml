@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Finance - Category - Pranesh Srinivasan</title>
-        <link>spranesh.github.io/categories/finance/</link>
+        <link>http://spranesh.github.io/categories/finance/</link>
         <description>Finance - Category - Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 22 Oct 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="spranesh.github.io/categories/finance/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 22 Oct 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://spranesh.github.io/categories/finance/" rel="self" type="application/rss+xml" /><item>
     <title>Why equities?</title>
-    <link>spranesh.github.io/posts/2015-10-22-why-equities/</link>
+    <link>http://spranesh.github.io/posts/2015-10-22-why-equities/</link>
     <pubDate>Thu, 22 Oct 2015 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2015-10-22-why-equities/</guid>
+    <guid>http://spranesh.github.io/posts/2015-10-22-why-equities/</guid>
     <description><![CDATA[<p>In this post, we look at long-term inflation adjust returns across six
 different asset classes - cash, residential housing, gold, industrial
 commodities, bonds, and stocks (equities). By long-term, we mean at least a
@@ -20,10 +20,10 @@ deal with real returns - i.e, returns adjusted for inflation.</p>]]></descriptio
 </item>
 <item>
     <title>The rule of 72 - why it works and when</title>
-    <link>spranesh.github.io/posts/2015-09-10-rule-of-72/</link>
+    <link>http://spranesh.github.io/posts/2015-09-10-rule-of-72/</link>
     <pubDate>Thu, 10 Sep 2015 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2015-09-10-rule-of-72/</guid>
+    <guid>http://spranesh.github.io/posts/2015-09-10-rule-of-72/</guid>
     <description><![CDATA[<!-- hack for removing extra bullets from ToC -->
 <style>
 #TableOfContents ul { 
@@ -58,10 +58,10 @@ illustrative examples:</p>]]></description>
 </item>
 <item>
     <title>If you could only read 2 pages on investing</title>
-    <link>spranesh.github.io/posts/2015-06-28-only-2-pages-on-investing/</link>
+    <link>http://spranesh.github.io/posts/2015-06-28-only-2-pages-on-investing/</link>
     <pubDate>Sun, 28 Jun 2015 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2015-06-28-only-2-pages-on-investing/</guid>
+    <guid>http://spranesh.github.io/posts/2015-06-28-only-2-pages-on-investing/</guid>
     <description><![CDATA[<p>Over the last few years, I&rsquo;ve spent significant time reading Buffet&rsquo;s annual
 letters, Security Analysis (Graham &amp; Dodd), and listening to people like Tom
 Geyner (of Markel Capital) talk about their steadfast principles. I was
@@ -71,10 +71,10 @@ books expound the mere basics of what makes an asset?</p>]]></description>
 </item>
 <item>
     <title>The true cost of renting</title>
-    <link>spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</link>
+    <link>http://spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</link>
     <pubDate>Thu, 24 Jul 2014 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</guid>
+    <guid>http://spranesh.github.io/drafts/2014-07-24-the-true-cost-of-rent/</guid>
     <description><![CDATA[<script type="text/javascript">
 
 function GetBonusMessage(extra) {

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Archive - Pranesh Srinivasan</title>
-        <link>spranesh.github.io/posts/</link>
+        <link>http://spranesh.github.io/posts/</link>
         <description>All Archive | Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 01 May 2014 00:00:00 &#43;0000</lastBuildDate><atom:link href="spranesh.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 01 May 2014 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://spranesh.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Berkshire 2020: Notes from the Virtual AGM</title>
-    <link>spranesh.github.io/posts/2020-05-05-berkshire-2020/</link>
+    <link>http://spranesh.github.io/posts/2020-05-05-berkshire-2020/</link>
     <pubDate>Mon, 06 Apr 2020 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2020-05-05-berkshire-2020/</guid>
+    <guid>http://spranesh.github.io/posts/2020-05-05-berkshire-2020/</guid>
     <description><![CDATA[<p>Berkshire Hathaway held it&rsquo;s first virtual AGM this weekend, thanks to the
 ongoing pandemic. Buffett first spoke for an hour about some history of the
 market, followed by the formal shareholder&rsquo;s meeting, and roughly 2 hours of
@@ -21,10 +21,10 @@ virtual-only format. Here are my high level takeaways from the event.</p>]]></de
 </item>
 <item>
     <title>Notes from JL Collins on the market crash (Mad Fientist podcast)</title>
-    <link>spranesh.github.io/posts/2020-03-16-bear-market-notes-jl-collins/</link>
+    <link>http://spranesh.github.io/posts/2020-03-16-bear-market-notes-jl-collins/</link>
     <pubDate>Mon, 16 Mar 2020 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2020-03-16-bear-market-notes-jl-collins/</guid>
+    <guid>http://spranesh.github.io/posts/2020-03-16-bear-market-notes-jl-collins/</guid>
     <description><![CDATA[<p>After nearly a decade, the much awaited bear market is on us. It didn&rsquo;t arrive
 in any form or shape that anyone would have liked or predicted, but that&rsquo;s how
 regimes change in the equity markets. I plan to write up my thoughts soon, but
@@ -36,10 +36,10 @@ Collins on the Mad Fientist.</p>
 </item>
 <item>
     <title>Fishing where the fish are</title>
-    <link>spranesh.github.io/posts/2019-04-15-fishing-where-the-fish-are/</link>
+    <link>http://spranesh.github.io/posts/2019-04-15-fishing-where-the-fish-are/</link>
     <pubDate>Mon, 15 Apr 2019 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2019-04-15-fishing-where-the-fish-are/</guid>
+    <guid>http://spranesh.github.io/posts/2019-04-15-fishing-where-the-fish-are/</guid>
     <description><![CDATA[<p>&ldquo;<a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.pdf" target="_blank" rel="noopener noreffer ">You and Your
 Research</a>&rdquo; is one
 of my favorite lectures on the scientific process. In it, Turing Award winner,
@@ -50,10 +50,10 @@ This key idea turns out to be of massive significance in the investing process a
 </item>
 <item>
     <title>The selfless legend: John Bogle</title>
-    <link>spranesh.github.io/posts/2019-01-16-selfless-legend-bogle/</link>
+    <link>http://spranesh.github.io/posts/2019-01-16-selfless-legend-bogle/</link>
     <pubDate>Wed, 16 Jan 2019 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2019-01-16-selfless-legend-bogle/</guid>
+    <guid>http://spranesh.github.io/posts/2019-01-16-selfless-legend-bogle/</guid>
     <description><![CDATA[<p>Sometimes, we are aware that something is very likely to happen, but we don&rsquo;t
 fully digest the implications until we go through the motions. For many years
 now, John C. Bogle, the founder of Vanguard group has signalled about his
@@ -67,19 +67,19 @@ concluded that the vast majority of them underperform the market.</p>]]></descri
 </item>
 <item>
     <title>Reversion to the Mean</title>
-    <link>spranesh.github.io/posts/2018-07-02-rtm/</link>
+    <link>http://spranesh.github.io/posts/2018-07-02-rtm/</link>
     <pubDate>Wed, 18 Jul 2018 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2018-07-02-rtm/</guid>
+    <guid>http://spranesh.github.io/posts/2018-07-02-rtm/</guid>
     <description><![CDATA[<p>Post on Reversion to the Mean. Link to John Bogle&rsquo;s post and chart.</p>
 <p><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwliubDGhJtRLXlq0Pj3kajY2bJSk6zrmJaMqK4Yl79UxqVPgS6Evrw9yf0mMLHk-50AWa4nnlxt7C/pubchart?oid=572780189&amp;format=image" target="_blank" rel="noopener noreffer ">https://docs.google.com/spreadsheets/d/e/2PACX-1vTwliubDGhJtRLXlq0Pj3kajY2bJSk6zrmJaMqK4Yl79UxqVPgS6Evrw9yf0mMLHk-50AWa4nnlxt7C/pubchart?oid=572780189&format=image</a></p>]]></description>
 </item>
 <item>
     <title>An estimate of the size of passive indexing</title>
-    <link>spranesh.github.io/posts/2018-06-20-passive-indexing/</link>
+    <link>http://spranesh.github.io/posts/2018-06-20-passive-indexing/</link>
     <pubDate>Wed, 20 Jun 2018 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2018-06-20-passive-indexing/</guid>
+    <guid>http://spranesh.github.io/posts/2018-06-20-passive-indexing/</guid>
     <description><![CDATA[<p>With low fees, excellent diversification, and probabilities in the investor&rsquo;s
 favor, indexing and passive investing have been on the rise for the last 40
 years. <a href="http://www.vanguard.com" target="_blank" rel="noopener noreffer ">Vanguard</a> is a leader in this field, offering
@@ -100,10 +100,10 @@ So, which is it?</p>]]></description>
 </item>
 <item>
     <title>STORE Capital</title>
-    <link>spranesh.github.io/posts/2018-03-19-stor/</link>
+    <link>http://spranesh.github.io/posts/2018-03-19-stor/</link>
     <pubDate>Sun, 18 Mar 2018 15:07:05 -0800</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2018-03-19-stor/</guid>
+    <guid>http://spranesh.github.io/posts/2018-03-19-stor/</guid>
     <description><![CDATA[<p>Founded by Oaktree Capital in 2014, STORE Capital holds a diversified real
 estate portfolio across the US. Berkshire Hathaway bought 9.8% of the company
 last summer via a new equity issuance.</p>
@@ -114,10 +114,10 @@ to read more.</p>]]></description>
 </item>
 <item>
     <title>Fairfax India Holdings</title>
-    <link>spranesh.github.io/posts/2017-12-21-fih/</link>
+    <link>http://spranesh.github.io/posts/2017-12-21-fih/</link>
     <pubDate>Thu, 21 Dec 2017 15:50:10 -0800</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2017-12-21-fih/</guid>
+    <guid>http://spranesh.github.io/posts/2017-12-21-fih/</guid>
     <description><![CDATA[<p>A few months ago, I wrote about <a href="/2017/09/14/fairfax-financial-holdings/" rel="">Fairfax Financial
 Holdings</a>. Fairfax India Holdings(FIH)
 is a partly-owned subsidiary of Fairfax Financial Holdings that primarily
@@ -128,10 +128,10 @@ invests in India. FIH IPOed in 2014 at $10 per share. After a rise of nearly
 </item>
 <item>
     <title>Value investing during the last bull cycle</title>
-    <link>spranesh.github.io/posts/2017-11-26-value-in-the-cycle/</link>
+    <link>http://spranesh.github.io/posts/2017-11-26-value-in-the-cycle/</link>
     <pubDate>Sun, 26 Nov 2017 19:41:00 &#43;0530</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2017-11-26-value-in-the-cycle/</guid>
+    <guid>http://spranesh.github.io/posts/2017-11-26-value-in-the-cycle/</guid>
     <description><![CDATA[<p>Recently, there have been many pieces that claim that value investing has not
 worked this cycle. <a href="https://www.cnbc.com/2017/10/24/david-einhorn-value-investing-may-be-dead-and-amazon-and-tesla-killed-it.html" target="_blank" rel="noopener noreffer ">Einhorn</a> questioned if value investing is dead and
 <a href="https://www.bloomberg.com/news/articles/2017-06-08/goldman-sachs-mulls-death-of-value-investing-after-losing-decade" target="_blank" rel="noopener noreffer ">Goldman Sachs</a> mulled it.</p>
@@ -144,10 +144,10 @@ others have closed shop. But is it true?</p>]]></description>
 </item>
 <item>
     <title>Fairfax Financial Holdings</title>
-    <link>spranesh.github.io/posts/2017-09-14-ffh/</link>
+    <link>http://spranesh.github.io/posts/2017-09-14-ffh/</link>
     <pubDate>Thu, 14 Sep 2017 00:37:49 -0700</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2017-09-14-ffh/</guid>
+    <guid>http://spranesh.github.io/posts/2017-09-14-ffh/</guid>
     <description><![CDATA[<p>Fairfax financial holdings was formed when Prem Watsa and a motley crew of four
 others took over Markel Financial Canda in 1985. Since then, Fairfax has
 compounded it&rsquo;s book at nearly 20% per year. A $10,000 investment in 1985 would

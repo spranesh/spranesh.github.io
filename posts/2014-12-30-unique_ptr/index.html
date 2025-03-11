@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>The joys of unique_ptr - Pranesh Srinivasan</title><meta name="Description" content="Pranesh Srinivasan&#39;s Blog"><meta property="og:url" content="spranesh.github.io/posts/2014-12-30-unique_ptr/">
+        <title>The joys of unique_ptr - Pranesh Srinivasan</title><meta name="Description" content="Pranesh Srinivasan&#39;s Blog"><meta property="og:url" content="http://spranesh.github.io/posts/2014-12-30-unique_ptr/">
   <meta property="og:site_name" content="Pranesh Srinivasan">
   <meta property="og:title" content="The joys of unique_ptr">
   <meta property="og:description" content="C&#43;&#43;11 introduces unique_ptr a wonderful way to manage the most common pointer use cases without losing sanity. While any pointer can point only to one object at a time, the unique_ptr construct further enforces only one pointer to the object at any point of time; i.e, a bijective mapping between pointers and objects. For example,
@@ -15,17 +15,17 @@ std::unique_ptr&lt;Foo&gt; foo_ptr(new Foo()); is equivalent to saying that foo_
     <meta property="article:published_time" content="2014-12-30T09:35:41-08:00">
     <meta property="article:modified_time" content="2014-12-30T09:35:41-08:00">
     <meta property="article:tag" content="Software">
-    <meta property="og:image" content="/logo.png">
+    <meta property="og:image" content="http://spranesh.github.io/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="/logo.png">
+  <meta name="twitter:image" content="http://spranesh.github.io/logo.png">
   <meta name="twitter:title" content="The joys of unique_ptr">
   <meta name="twitter:description" content="C&#43;&#43;11 introduces unique_ptr a wonderful way to manage the most common pointer use cases without losing sanity. While any pointer can point only to one object at a time, the unique_ptr construct further enforces only one pointer to the object at any point of time; i.e, a bijective mapping between pointers and objects. For example,
 std::unique_ptr&lt;Foo&gt; foo_ptr(new Foo()); is equivalent to saying that foo_ptr is the only pointer that points to the object we passed into the constructor. The dereference and member access methods are overriden so that foo_ptr looks like, sounds like and behaves like a normal pointer. One can say *foo_ptr and foo_ptr-&gt;method() as expected. Also being consistent with denoting ownership, a unique_ptr, it cannot be copied, only moved.1">
 <meta name="application-name" content="Pranesh Srinivasan">
 <meta name="apple-mobile-web-app-title" content="Pranesh Srinivasan"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="spranesh.github.io/posts/2014-12-30-unique_ptr/" /><link rel="prev" href="spranesh.github.io/posts/2014-07-31-my-linux-setup/" /><link rel="next" href="spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/" /><link rel="stylesheet" href="spranesh.github.io/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://spranesh.github.io/posts/2014-12-30-unique_ptr/" /><link rel="prev" href="http://spranesh.github.io/posts/2014-07-31-my-linux-setup/" /><link rel="next" href="http://spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -35,9 +35,9 @@ std::unique_ptr&lt;Foo&gt; foo_ptr(new Foo()); is equivalent to saying that foo_
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "spranesh.github.io\/posts\/2014-12-30-unique_ptr\/"
-        },"image": ["\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "software","wordcount":  850 ,
-        "url": "spranesh.github.io\/posts\/2014-12-30-unique_ptr\/","datePublished": "2014-12-30T09:35:41-08:00","dateModified": "2014-12-30T09:35:41-08:00","publisher": {
+            "@id": "http:\/\/spranesh.github.io\/posts\/2014-12-30-unique_ptr\/"
+        },"image": ["http:\/\/spranesh.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "software","wordcount":  850 ,
+        "url": "http:\/\/spranesh.github.io\/posts\/2014-12-30-unique_ptr\/","datePublished": "2014-12-30T09:35:41-08:00","dateModified": "2014-12-30T09:35:41-08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -50,10 +50,10 @@ std::unique_ptr&lt;Foo&gt; foo_ptr(new Foo()); is equivalent to saying that foo_
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="spranesh.github.io/" title="Pranesh Srinivasan"></a>
+            <a href="/" title="Pranesh Srinivasan"></a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/spranesh.github.io/about/"> About </a><a class="menu-item" href="/spranesh.github.io/interests/"> Interests </a><a class="menu-item" href="/spranesh.github.io/projects/"> Projects </a><a class="menu-item" href="/spranesh.github.io/posts/"> Blog </a><a class="menu-item" href="/spranesh.github.io"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/interests/"> Interests </a><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/posts/"> Blog </a><a class="menu-item" href="/"> Home </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -62,13 +62,13 @@ std::unique_ptr&lt;Foo&gt; foo_ptr(new Foo()); is equivalent to saying that foo_
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="spranesh.github.io/" title="Pranesh Srinivasan"></a>
+                <a href="/" title="Pranesh Srinivasan"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/spranesh.github.io/about/" title="">About</a><a class="menu-item" href="/spranesh.github.io/interests/" title="">Interests</a><a class="menu-item" href="/spranesh.github.io/projects/" title="">Projects</a><a class="menu-item" href="/spranesh.github.io/posts/" title="">Blog</a><a class="menu-item" href="/spranesh.github.io" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/interests/" title="">Interests</a><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/posts/" title="">Blog</a><a class="menu-item" href="/" title="">Home</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
@@ -77,7 +77,7 @@ std::unique_ptr&lt;Foo&gt; foo_ptr(new Foo()); is equivalent to saying that foo_
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">The joys of unique_ptr</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="spranesh.github.io/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Pranesh Srinivasan</a></span>&nbsp;<span class="post-category">included in <a href="spranesh.github.io/categories/programming/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Programming</a></span></div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Pranesh Srinivasan</a></span>&nbsp;<span class="post-category">included in <a href="/categories/programming/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Programming</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2014-12-30">2014-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;850 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -272,27 +272,27 @@ constraint of all!</p>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="spranesh.github.io/posts/2014-12-30-unique_ptr/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/posts/2014-12-30-unique_ptr/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr" data-hashtags="software"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-hashtag="software"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=spranesh.github.io%2fposts%2f2014-12-30-unique_ptr%2f&amp;text=The%20joys%20of%20unique_ptr" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr" data-hashtags="software"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://spranesh.github.io/posts/2014-12-30-unique_ptr/" data-hashtag="software"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://spranesh.github.io/posts/2014-12-30-unique_ptr/" data-title="The joys of unique_ptr" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2fspranesh.github.io%2fposts%2f2014-12-30-unique_ptr%2f&amp;text=The%20joys%20of%20unique_ptr" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="spranesh.github.io/tags/software/">Software</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/software/">Software</a></section>
         <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="spranesh.github.io/">Home</a></span>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="spranesh.github.io/posts/2014-07-31-my-linux-setup/" class="prev" rel="prev" title="My lightweight linux setup"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>My lightweight linux setup</a>
-            <a href="spranesh.github.io/posts/2015-02-19-the-decision-outcome-matrix/" class="next" rel="next" title="The decision-outcome matrix">The decision-outcome matrix<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/2014-07-31-my-linux-setup/" class="prev" rel="prev" title="My lightweight linux setup"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>My lightweight linux setup</a>
+            <a href="/posts/2015-02-19-the-decision-outcome-matrix/" class="next" rel="next" title="The decision-outcome matrix">The decision-outcome matrix<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="spranesh.github.io/" target="_blank">Pranesh Srinivasan</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Pranesh Srinivasan</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
@@ -304,5 +304,5 @@ constraint of all!</p>
         <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="spranesh.github.io/js/theme.min.js"></script></body>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
 </html>

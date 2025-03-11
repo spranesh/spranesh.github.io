@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Investing - Tag - Pranesh Srinivasan</title>
-        <link>spranesh.github.io/tags/investing/</link>
+        <link>http://spranesh.github.io/tags/investing/</link>
         <description>Investing - Tag - Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Sat, 04 Feb 2017 09:59:26 -0800</lastBuildDate><atom:link href="spranesh.github.io/tags/investing/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Sat, 04 Feb 2017 09:59:26 -0800</lastBuildDate><atom:link href="http://spranesh.github.io/tags/investing/" rel="self" type="application/rss+xml" /><item>
     <title>Survey of non-food FMCGs</title>
-    <link>spranesh.github.io/posts/2017-02-04-fmcg/</link>
+    <link>http://spranesh.github.io/posts/2017-02-04-fmcg/</link>
     <pubDate>Sat, 04 Feb 2017 09:59:26 -0800</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2017-02-04-fmcg/</guid>
+    <guid>http://spranesh.github.io/posts/2017-02-04-fmcg/</guid>
     <description><![CDATA[<p>Fast moving consumer goods (FMCGs) are an essential part of our lives today.
 Not all FMCGs are commodities however. Some brands continue to engage a loyal
 and growing user base due to superior products, global outreach, and decades of
@@ -25,10 +25,10 @@ have started to chip away.</p>]]></description>
 </item>
 <item>
     <title>Why equities?</title>
-    <link>spranesh.github.io/posts/2015-10-22-why-equities/</link>
+    <link>http://spranesh.github.io/posts/2015-10-22-why-equities/</link>
     <pubDate>Thu, 22 Oct 2015 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2015-10-22-why-equities/</guid>
+    <guid>http://spranesh.github.io/posts/2015-10-22-why-equities/</guid>
     <description><![CDATA[<p>In this post, we look at long-term inflation adjust returns across six
 different asset classes - cash, residential housing, gold, industrial
 commodities, bonds, and stocks (equities). By long-term, we mean at least a

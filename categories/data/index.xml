@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Data - Category - Pranesh Srinivasan</title>
-        <link>spranesh.github.io/categories/data/</link>
+        <link>http://spranesh.github.io/categories/data/</link>
         <description>Data - Category - Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 28 May 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="spranesh.github.io/categories/data/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Thu, 28 May 2015 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://spranesh.github.io/categories/data/" rel="self" type="application/rss+xml" /><item>
     <title>Choosing intuitive axes</title>
-    <link>spranesh.github.io/drafts/2015-05-28-intuitive-axes/</link>
+    <link>http://spranesh.github.io/drafts/2015-05-28-intuitive-axes/</link>
     <pubDate>Thu, 28 May 2015 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/drafts/2015-05-28-intuitive-axes/</guid>
+    <guid>http://spranesh.github.io/drafts/2015-05-28-intuitive-axes/</guid>
     <description><![CDATA[<p>Earlier today, the New York times <a href="http://nyti.ms/1LLH6ml" target="_blank" rel="noopener noreffer ">published</a> a
 wonderful visualization on how family income affects children&rsquo;s college
 chances. The visualization uses a new you-draw-it-first paradigm, where the

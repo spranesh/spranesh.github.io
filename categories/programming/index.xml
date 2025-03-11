@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Programming - Category - Pranesh Srinivasan</title>
-        <link>spranesh.github.io/categories/programming/</link>
+        <link>http://spranesh.github.io/categories/programming/</link>
         <description>Programming - Category - Pranesh Srinivasan</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>spranesh@gmail.com (Pranesh Srinivasan)</managingEditor>
-            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Sun, 25 Dec 2016 09:26:41 -0800</lastBuildDate><atom:link href="spranesh.github.io/categories/programming/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>spranesh@gmail.com (Pranesh Srinivasan)</webMaster><lastBuildDate>Sun, 25 Dec 2016 09:26:41 -0800</lastBuildDate><atom:link href="http://spranesh.github.io/categories/programming/" rel="self" type="application/rss+xml" /><item>
     <title>From Jekyll to Hugo</title>
-    <link>spranesh.github.io/posts/2016-12-25-hugo/</link>
+    <link>http://spranesh.github.io/posts/2016-12-25-hugo/</link>
     <pubDate>Sun, 25 Dec 2016 09:26:41 -0800</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2016-12-25-hugo/</guid>
+    <guid>http://spranesh.github.io/posts/2016-12-25-hugo/</guid>
     <description><![CDATA[<p>I&rsquo;ve always used static generators to run my website. They are performant to
 serve, and a good one can provide both flexibility and simplicity at the same
 time.</p>
@@ -20,10 +20,10 @@ department&rsquo;s hosting, I stumbled upon Jekyll.</p>]]></description>
 </item>
 <item>
     <title>The joys of unique_ptr</title>
-    <link>spranesh.github.io/posts/2014-12-30-unique_ptr/</link>
+    <link>http://spranesh.github.io/posts/2014-12-30-unique_ptr/</link>
     <pubDate>Tue, 30 Dec 2014 09:35:41 -0800</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2014-12-30-unique_ptr/</guid>
+    <guid>http://spranesh.github.io/posts/2014-12-30-unique_ptr/</guid>
     <description><![CDATA[<p>C++11 introduces
 <a href="http://en.cppreference.com/w/cpp/memory/unique_ptr" target="_blank" rel="noopener noreffer "><code>unique_ptr</code></a> a wonderful
 way to manage the most common pointer use cases without losing sanity. While
@@ -45,10 +45,10 @@ cannot be copied, only moved.<sup id="fnref:1"><a href="#fn:1" class="footnote-r
 </item>
 <item>
     <title>My lightweight linux setup</title>
-    <link>spranesh.github.io/posts/2014-07-31-my-linux-setup/</link>
+    <link>http://spranesh.github.io/posts/2014-07-31-my-linux-setup/</link>
     <pubDate>Thu, 31 Jul 2014 00:00:00 &#43;0000</pubDate>
     <author>Pranesh Srinivasan</author>
-    <guid>spranesh.github.io/posts/2014-07-31-my-linux-setup/</guid>
+    <guid>http://spranesh.github.io/posts/2014-07-31-my-linux-setup/</guid>
     <description><![CDATA[<!-- image:
   feature: https://raw.githubusercontent.com/spranesh/customisations/master/screenshot.png -->
 <p>My primary computing device for the last few years has been a 2009 netbook with
