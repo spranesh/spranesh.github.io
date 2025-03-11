@@ -25,16 +25,18 @@ Keyboards have held a special fascination for me, particularly as a heavy
 computer user. My journey began with a Kinesis Freestyle, mounted vertically to
 prioritize wrist comfort. This quickly grew into a genuine passion for
 collecting and using a variety of keyboards, even dabbling in custom builds. My
-daily driver is the Kinesis Advantage. Though I also own the newer Kinesis 360,
-finding myself still drawn to the classic Advantage 2. My collection include
-over a dozen split, ergonomic keyboards, including a custom Dactyl designed to
-perfectly fit my finger lengths, reflecting my dedication to finding the
-perfect typing experience.
+daily driver is the Kinesis Advantage. Though I also own the newer [Kinesis
+360](https://kinesis-ergo.com/keyboards/advantage360/), finding myself still
+drawn to the classic [Advantage
+2](https://kinesis-ergo.com/keyboards/advantage2-keyboard/). My collection
+include over a dozen split, ergonomic keyboards, including a custom Dactyl
+designed to perfectly fit my finger lengths, reflecting my dedication to
+finding the perfect typing experience.
 
 ![Kinesis Advantage 2 with Trackball](/images/keyb.png)
 
 
-A few years ago, I decided to transition to the Colemak keyboard layout. The
+A few years ago, I decided to transition to the [Colemak](http://colemak.org) keyboard layout. The
 initial weeks and months were demanding, but the effort has paid off, as I am
 now comfortably "multi-layout fluent." I maintain typing speeds well over 100
 words per minute on both Colemak and the standard QWERTY layout. For a quick
